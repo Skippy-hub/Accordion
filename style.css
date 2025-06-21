@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eee;
+}
+
+.container{
+    max-width: 31.25rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero{
+    background: url(./assets/images/background-pattern-desktop.svg);
+    padding-top: 2rem;
+    height: 15.625rem;
+}
+
+.hero__content{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    top: 6rem;
+}
+
+.hero__content-title{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero__content-title-img{
+    width: 1.5rem;
+}
+
+.hero__content-title-text{
+    font-size: 2rem;
+}
+
+.hero__content-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.hero__content-list-item-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.hero__content-list-item-content::after{
+    content: "+";
+    font-size: 1.5rem;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 1.5rem;
+}
+
+.hero__content-list-item.active .hero__content-list-item-content::after{
+    content: "\2014";
+    font-size: 0.75rem;
+}
+
+.hero__content-list-item-hiden{
+    font-size: 0.5rem;
+    color: #555;
+    padding: 0 1rem;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.highlight{
+    background: #c21b1b;
+}
