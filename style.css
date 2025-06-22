@@ -61,17 +61,15 @@ body{
 }
 
 .hero__content-list-item-content::after{
-    content: "+";
-    font-size: 1.5rem;
+    content: url(./assets/images/icon-plus.svg);
     position: absolute;
-    top: 40%;
+    top: 56%;
     transform: translateY(-50%);
-    right: 1.5rem;
+    right: 0.25rem;
 }
 
 .hero__content-list-item.active .hero__content-list-item-content::after{
-    content: "\2014";
-    font-size: 0.75rem;
+    content: url(./assets/images/icon-minus.svg);
 }
 
 .hero__content-list-item-hiden{
