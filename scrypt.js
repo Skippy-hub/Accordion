@@ -4,7 +4,7 @@ const list = document.querySelector(".hero__content-list");
 let selectedItem;
 
 list.onclick = function(event) {
-  let listItem = event.target.closest('div');
+  let listItem = event.target.closest('.hero__content-list-item-content');
 
   if (!listItem) return;
 
@@ -29,9 +29,8 @@ items.forEach((item) => {
 });
 
 function openItem(e){
-    e.preventDefault();
-    let currentItem = e.target.closest(".hero__content-list-item");
-    let currentContent = e.target.nextElementSibling;
+    let currentItem = e.target.closest(".hero__content-list-item-content-img");
+    let currentContent = e.target.parentElement.nextElementSibling;
     currentItem.classList.toggle("active");
     if (currentItem.classList.contains("active")){
         currentContent.style.maxHeight = currentContent.scrollHeight + "px";
